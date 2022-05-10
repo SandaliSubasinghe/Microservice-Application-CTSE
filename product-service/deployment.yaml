@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodeapp-product_service-deployment
+  name: nodeapp-product-service-deployment
 spec:
   selector:
     matchLabels:
