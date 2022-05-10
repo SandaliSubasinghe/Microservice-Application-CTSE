@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodeapp-product_service-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nodeapp
+  replicas: 5
+  template:
+    metadata:
+      labels:
+        app: nodeapp
+    spec:
+      containers:
+      - name: nodeserver
+        image: sandalisubasinghe95/node:latest
+        ports:
+        - containerPort: 8080
